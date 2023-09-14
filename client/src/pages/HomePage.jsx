@@ -1,7 +1,14 @@
 import React from 'react';
+import Nav from '../components/Nav';
 
 const HomePage = () => {
-    return <div>HomePage</div>;
+    return (
+        <>
+            <Nav />
+            <Nav />
+            <Nav />
+        </>
+    );
 };
 
 export default HomePage;
