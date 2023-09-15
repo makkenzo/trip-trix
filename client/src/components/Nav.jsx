@@ -16,7 +16,7 @@ const Nav = () => {
                     <a href="#">Блог</a>
                     <Link
                         to="/"
-                        className="bg-[#ffffff] text-[#070908]   px-4 py-2 rounded hover:bg-[#597367] transition duration-300 ease-in-out "
+                        className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] transition duration-300 ease-in-out "
                     >
                         Блог
                     </Link>
