@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center">
             <div className="flex justify-between w-4/5 py-6">
                 <a href="/">
                     {' '}
