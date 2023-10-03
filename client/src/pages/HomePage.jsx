@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../components/Nav';
 import bg from '../assets/bg1.png';
+import AboutSection from '../components/AboutSection';
 
 const HomePage = () => {
     return (
@@ -19,6 +20,8 @@ const HomePage = () => {
                     </p>
                 </div>
             </div>
+
+            <AboutSection/>
         </>
     );
 };
