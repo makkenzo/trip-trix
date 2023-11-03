@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '../components/Nav';
-import bg from '../assets/bg1.png';
+import bg from '../assets/bg2.png';
 import AboutSection from '../components/AboutSection';
 
 const HomePage = () => {
@@ -21,7 +21,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <AboutSection/>
+            <AboutSection />
         </>
     );
 };
