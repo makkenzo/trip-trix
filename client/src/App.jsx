@@ -9,6 +9,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="*" element={<ErrorPage />} />
+                
             </Routes>
         </BrowserRouter>
     );
