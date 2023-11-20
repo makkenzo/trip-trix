@@ -3,22 +3,22 @@ import bg from '../assets/AboutImage.png';
 
 const AboutSection = () => {
     return (
-        <div className="container mx-auto flex mt-12">
+        <div className="container mx-auto flex my-12">
             <div>
                 <div className="flex">
                     <div className="flex relative">
                         <img src={bg} alt="image" />
                         <div className="flex flex-col justify-evenly">
-                            <div className="bg-white w-[180px] absolute -right-16 top-20 py-4 px-8 rounded-3xl text-center shadow-xl">
-                                <h1 className="text-sky-600 font-bold text-3xl">300+</h1>
+                            <div className="bg-white w-[180px] absolute -right-16 top-20 py-4 px-8 rounded-3xl text-center shadow-2xl">
+                                <h1 className="text-[#769386] font-bold text-3xl">300+</h1>
                                 <p>НАПРАВЛЕНИЙ</p>
                             </div>
-                            <div className="bg-white absolute -left-16 py-4 px-8 rounded-3xl text-center shadow-lg">
-                                <h1 className="text-sky-600 font-bold text-3xl">5000+</h1>
+                            <div className="bg-white absolute -left-16 py-4 px-8 rounded-3xl text-center shadow-2xl">
+                                <h1 className="text-[#769386] font-bold text-3xl">5000+</h1>
                                 <p>ТУРИСТОВ</p>
                             </div>
-                            <div className="bg-white w-[180px] absolute -right-16 bottom-20 py-4 px-8 rounded-3xl text-center shadow-lg">
-                                <h1 className="text-sky-600 font-bold text-3xl">150+</h1>
+                            <div className="bg-white w-[180px] absolute -right-16 bottom-20 py-4 px-8 rounded-3xl text-center shadow-2xl">
+                                <h1 className="text-[#769386] font-bold text-3xl">150+</h1>
                                 <p>ОТЕЛЕЙ</p>
                             </div>
                         </div>
