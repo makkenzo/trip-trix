@@ -10,13 +10,21 @@ const Nav = () => {
                     <img src={logo} alt="n" className="w-38 h-10 " />
                 </a>
                 <div className="flex justify-between space-x-12 text-[#ffffff] py-2 items-center text-2xl ">
-                    <a href="#">Обзор</a>
-                    <a href="#">Советы</a>
-                    <a href="#">Оповещения</a>
-                    <a href="#">Блог</a>
+                    <a href="#" className="hover:underline hover:underline-offset-4">
+                        Обзор
+                    </a>
+                    <a href="#" className="hover:underline hover:underline-offset-4">
+                        Советы
+                    </a>
+                    <a href="#" className="hover:underline hover:underline-offset-4">
+                        Оповещения
+                    </a>
+                    <a href="#" className="hover:underline hover:underline-offset-4">
+                        Блог
+                    </a>
                     <Link
                         to="/"
-                        className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] transition duration-300 ease-in-out "
+                        className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] hover:text-white transition duration-300 ease-in-out"
                     >
                         Блог
                     </Link>
