@@ -1,59 +1,70 @@
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
+import img4 from '../assets/img4.png'
 
 const data = [
     {
-        label: 'HTML',
-        value: 'html',
-        desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+        label: 'Популярное',
+        value: 'popular',
+        
     },
     {
-        label: 'React',
-        value: 'react',
-        desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+        label: 'Новые',
+        value: 'new',
+        
     },
     {
-        label: 'Vue',
-        value: 'vue',
-        desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+        label: 'Красивые',
+        value: 'buatifull',
+        
     },
-    {
-        label: 'Angular',
-        value: 'angular',
-        desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
-    },
-    {
-        label: 'Svelte',
-        value: 'svelte',
-        desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
-    },
+    
 ];
 
 const RecomendedSection = () => {
     return (
-        <Tabs value="html">
-            <TabsHeader>
-                {data.map(({ label, value }) => (
-                    <Tab key={value} value={value}>
-                        {label}
-                    </Tab>
-                ))}
-            </TabsHeader>
-            <TabsBody>
-                {data.map(({ value, desc }) => (
-                    <TabPanel key={value} value={value}>
-                        {desc}
-                    </TabPanel>
-                ))}
-            </TabsBody>
-        </Tabs>
+        <div className='container mx-auto flex my-12 flex-col justify-center items-center text-center'>
+            <h1 className='font-bold text-5xl mt-[150px]'>Рекомендуемые Места</h1>
+            <div className='mt-[50px]'>
+                <Tabs value="html">
+                    <div className=''>
+                        <TabsHeader>
+                            {data.map(({ label, value }) => (
+                                <Tab key={value} value={value}>
+                                    {label}
+                                </Tab>
+                            ))}
+                        </TabsHeader>
+                    </div>
+                    <TabsBody className='mt-10'>
+                        {data.map(({ value }) => (
+                            <TabPanel key={value} value={value}>
+                               <div className='flex flex-row justify-between'>
+                                    <div>
+                                        <img src={img1} alt="image" srcset="" />
+                                        box1
+                                    </div>
+                                    <div>
+                                        <img src={img2} alt="image" srcset="" />
+                                        box2
+                                    </div>
+                                    <div>
+                                        <img src={img3} alt="image" srcset="" />
+                                        box3
+                                    </div>
+                                    <div>
+                                        <img src={img4} alt="image" srcset="" />
+                                        box4
+                                    </div>
+                               </div>
+                            </TabPanel>
+                        ))}
+                    </TabsBody>
+                </Tabs>
+            </div>
+        </div>
     );
 };
 
