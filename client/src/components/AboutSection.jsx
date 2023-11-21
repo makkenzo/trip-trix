@@ -3,7 +3,7 @@ import bg from '../assets/AboutImage.png';
 
 const AboutSection = () => {
     return (
-        <div className="container mx-auto flex my-12">
+        <div className="container mx-auto flex my-20">
             <div>
                 <div className="flex">
                     <div className="flex relative">

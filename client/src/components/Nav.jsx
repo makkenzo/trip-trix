@@ -23,10 +23,10 @@ const Nav = () => {
                         Блог
                     </a>
                     <Link
-                        to="/"
+                        to="/profile"
                         className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] hover:text-white transition duration-300 ease-in-out"
                     >
-                        Блог
+                        Личный кабинет
                     </Link>
                 </div>
             </div>
