@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
+import AppService from '../utils/api';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const handleLogin = () => {};
+    const handleLogin = async () => {
+        try {
+            const response = await AppService.loginUser({ username, password });
+
+            if (response.status === 200) {
+                localStorage.setItem('userId', response.data.id);
+                navigate('/profile');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // if (loggedIn) {
+    //     return <Redirect to="/profile" />;
+    // }
 
     return (
         <div className="container mx-auto flex flex-col w-[300px] items-center justify-center h-screen">
             <h1 className="font-semibold text-2xl mb-4">Личный кабинет</h1>
-            <form className="w-full">
+            <div className="w-full">
                 <div className="mb-6">
                     <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900">
                         Имя пользователя
@@ -41,13 +60,12 @@ const AuthPage = () => {
                     </a>
                 </p>
                 <button
-                    type="submit"
                     onClick={handleLogin}
                     className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] hover:text-white text-xl transition duration-300 ease-in-out w-full"
                 >
                     Войти
                 </button>
-            </form>
+            </div>
         </div>
     );
 };

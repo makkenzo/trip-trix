@@ -37,7 +37,7 @@ app.post('/login', async (req, res) => {
 
     const token = jwt.sign({ id: user._id, username: user.username }, process.env.JWT_SECRET);
 
-    res.json({ token });
+    res.json({ token, id: user._id });
 });
 
 app.post('/register', async (req, res) => {
