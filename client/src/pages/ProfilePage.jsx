@@ -10,7 +10,12 @@ const ProfilePage = () => {
         }
     }, []);
 
-    return <div>ProfilePage</div>;
+    const handleLogout = () => {
+        localStorage.removeItem('userId');
+        navigate('/');
+    };
+
+    return <button onClick={handleLogout}>logout</button>;
 };
 
 export default ProfilePage;

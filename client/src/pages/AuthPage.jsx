@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import AppService from '../utils/api';
-import axios from 'axios';
+import logo from '../assets/trip-trix-logo.png';
 import { useNavigate } from 'react-router-dom';
 
 const AuthPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loadingButton, setLoadingButton] = useState(false);
+
     const navigate = useNavigate();
 
     const handleLogin = async () => {
+        setLoadingButton(true);
         try {
             const response = await AppService.loginUser({ username, password });
 
@@ -18,6 +21,8 @@ const AuthPage = () => {
             }
         } catch (error) {
             console.error(error);
+        } finally {
+            setLoadingButton(false);
         }
     };
 
@@ -27,6 +32,9 @@ const AuthPage = () => {
 
     return (
         <div className="container mx-auto flex flex-col w-[300px] items-center justify-center h-screen">
+            <a href="/" className="my-4">
+                <img src={logo} alt="n" className="w-38 h-10" />
+            </a>
             <h1 className="font-semibold text-2xl mb-4">Личный кабинет</h1>
             <div className="w-full">
                 <div className="mb-6">
@@ -61,7 +69,10 @@ const AuthPage = () => {
                 </p>
                 <button
                     onClick={handleLogin}
-                    className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded hover:bg-[#769386] hover:text-white text-xl transition duration-300 ease-in-out w-full"
+                    disabled={loadingButton}
+                    className={`bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded ${
+                        loadingButton ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#769386] hover:text-white'
+                    } text-xl transition duration-300 ease-in-out w-full`}
                 >
                     Войти
                 </button>

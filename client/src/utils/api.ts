@@ -17,9 +17,9 @@ class ApplicationService {
             throw error;
         }
     };
-    registerUser = async ({ login, password }: { login: string; password: string }) => {
+    registerUser = async ({ username, password }: { username: string; password: string }) => {
         try {
-            const response = await instance.post('/register', { login, password });
+            const response = await instance.post('/register', { username, password });
             return response;
         } catch (error) {
             console.error('Error during the register-user request: ', error);
