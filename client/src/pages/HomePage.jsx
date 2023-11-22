@@ -2,7 +2,8 @@ import React from 'react';
 import Nav from '../components/Nav';
 import bg from '../assets/bg2.png';
 import AboutSection from '../components/AboutSection';
-import RecomendedSection from '../components/RecomendedSection'
+import RecomendedSection from '../components/RecomendedSection';
+import MainInput from '../components/MainInput';
 
 const HomePage = () => {
     return (
@@ -21,9 +22,9 @@ const HomePage = () => {
                     </p>
                 </div>
             </div>
-
+            <MainInput />
             <AboutSection />
-            <RecomendedSection/>
+            <RecomendedSection />
         </>
     );
 };
