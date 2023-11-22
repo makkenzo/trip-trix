@@ -25,7 +25,7 @@ const data = [
 
 const RecomendedSection = () => {
     return (
-        <div className='container mx-auto flex my-12 flex-col justify-center items-center text-center'>
+        <div className='container mx-auto flex my-12 flex-col     text-center'>
             <h1 className='font-bold text-5xl mt-[150px]'>Рекомендуемые Места</h1>
             <div className='mt-[50px]'>
                 <Tabs value="html">
@@ -42,21 +42,25 @@ const RecomendedSection = () => {
                         {data.map(({ value }) => (
                             <TabPanel key={value} value={value}>
                                <div className='flex flex-row justify-between'>
-                                    <div>
-                                        <img src={img1} alt="image" srcset="" />
-                                        box1
+                                    <div className='shadow-lg flex flex-col text-left text p-3 rounded-lg'>
+                                        <img className='' src={img1} alt="image" srcset="" />
+                                        <h1 className='font-bold text-1xl pt-2 pl-3 text-black'>Пальмовый рай</h1>
+                                        <p className='pl-3'>Тайланд</p>
                                     </div>
-                                    <div>
+                                    <div className='shadow-lg flex flex-col text-left text p-3 rounded-lg'>
                                         <img src={img2} alt="image" srcset="" />
-                                        box2
-                                    </div>
-                                    <div>
+                                        <h1 className='font-bold text-1xl pt-2 pl-3 text-black'>Пляж Аррива</h1>
+                                        <p className='pl-3'>Бали</p>
+                                    </div >
+                                    <div className='shadow-lg flex flex-col text-left text p-3 rounded-lg'>
                                         <img src={img3} alt="image" srcset="" />
-                                        box3
+                                        <h1 className='font-bold text-1xl pt-2 pl-3 text-black'>Гора Кина</h1>
+                                        <p className='pl-3'>Канада</p>
                                     </div>
-                                    <div>
+                                    <div className='shadow-lg flex flex-col text-left text p-3 rounded-lg'>
                                         <img src={img4} alt="image" srcset="" />
-                                        box4
+                                        <h1 className='font-bold text-1xl pt-2 pl-3 text-black'>Горный Круиз</h1>
+                                        <p className='pl-3'>Швейцария</p>
                                     </div>
                                </div>
                             </TabPanel>
