@@ -28,7 +28,7 @@ const RecomendedSection = () => {
         <div className='container mx-auto flex my-12 flex-col     text-center'>
             <h1 className='font-bold text-5xl mt-[150px]'>Рекомендуемые Места</h1>
             <div className='mt-[50px]'>
-                <Tabs value="html">
+                <Tabs value="popular" >
                     <div className=''>
                         <TabsHeader>
                             {data.map(({ label, value }) => (

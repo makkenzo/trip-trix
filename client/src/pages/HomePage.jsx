@@ -3,7 +3,9 @@ import Nav from '../components/Nav';
 import bg from '../assets/bg2.png';
 import AboutSection from '../components/AboutSection';
 import RecomendedSection from '../components/RecomendedSection';
+import DontMiss from '../components/DontMiss';
 import MainInput from '../components/MainInput';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
@@ -25,6 +27,8 @@ const HomePage = () => {
             <MainInput />
             <AboutSection />
             <RecomendedSection />
+            <DontMiss/>
+            <Footer/>
         </>
     );
 };
