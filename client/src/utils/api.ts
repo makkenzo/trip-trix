@@ -9,7 +9,7 @@ class ApplicationService {
         console.log(username, password);
 
         try {
-            const response = await instance.post('/login', { username: username, password: password });
+            const response = await instance.post('/api/users/login', { username: username, password: password });
 
             return response;
         } catch (error) {
@@ -19,7 +19,7 @@ class ApplicationService {
     };
     registerUser = async ({ username, password }: { username: string; password: string }) => {
         try {
-            const response = await instance.post('/register', { username, password });
+            const response = await instance.post('/api/users/register', { username, password });
             return response;
         } catch (error) {
             console.error('Error during the register-user request: ', error);
