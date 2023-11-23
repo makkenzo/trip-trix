@@ -7,6 +7,7 @@ import { Datepicker } from 'flowbite-react';
 const MainInput = () => {
     return (
         <div className="container mx-auto flex justify-center mt-16 space-x-4">
+            {/* <div className="bg-white flex space-x-4 p-4 rounded-xl"> */}
             <div className="border border-gray-500 p-4 flex items-center rounded-2xl space-x-4">
                 <div>
                     <p className="text-gray-600 mb-2">Город вылета</p>
@@ -53,9 +54,10 @@ const MainInput = () => {
                 </div>
             </div>
 
-            <button className="bg-[#C6D2CD] text-[#070908] px-8 pt-2 pb-3 rounded-full hover:bg-[#769386] hover:text-white transition duration-300 ease-in-out">
+            <button className="bg-[#C6D2CD] text-[#070908] px-[40px] py-4 rounded-2xl hover:bg-[#769386] hover:text-white transition duration-300 ease-in-out">
                 <FaSearch size={30} />
             </button>
+            {/* </div> */}
         </div>
     );
 };
