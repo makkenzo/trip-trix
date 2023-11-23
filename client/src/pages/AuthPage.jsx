@@ -15,7 +15,7 @@ const AuthPage = () => {
         try {
             const response = await AppService.loginUser({ username, password });
 
-            if (response.status === 200) {
+            if (response.status === 201) {
                 localStorage.setItem('userId', response.data.id);
                 navigate('/profile');
             }

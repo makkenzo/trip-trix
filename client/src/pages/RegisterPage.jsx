@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import AppService from '../utils/api';
 import logo from '../assets/trip-trix-logo.png';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const RegisterPage = () => {
     const [username, setUsername] = useState('');
@@ -9,6 +11,14 @@ const RegisterPage = () => {
     const [passwordMismatch, setPasswordMismatch] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
     const [loadingButton, setLoadingButton] = useState(false);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem('userId')) {
+            navigate('/profile');
+        }
+    }, []);
 
     const handleRegister = async () => {
         setErrorMsg('');
@@ -23,6 +33,10 @@ const RegisterPage = () => {
 
         try {
             const response = await AppService.registerUser({ username, password });
+
+            if (response.status === 201) {
+                navigate('/auth');
+            }
         } catch (error) {
             setErrorMsg(error.response.data.error);
             console.error(error.response.data.error);
