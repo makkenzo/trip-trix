@@ -8,7 +8,12 @@ function Blog() {
            <Nav/> 
         </div>
         <div className='container mx-auto flex flex-col my-20'>
-
+            <div>
+                <div>Left</div>
+                <div>
+                    
+                </div>
+            </div>
         </div>
     </div>
   )
