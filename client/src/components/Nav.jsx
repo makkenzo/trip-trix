@@ -10,8 +10,8 @@ const Nav = () => {
                     <img src={logo} alt="n" className="w-38 h-10 " />
                 </a>
                 <div className="flex justify-between space-x-12 text-[#ffffff] py-2 items-center text-2xl ">
-                    <a href="#" className="hover:underline hover:underline-offset-4">
-                        Обзор
+                    <a href="/blog" className="hover:underline hover:underline-offset-4">
+                        Блог
                     </a>
                     <a href="/advicec" className="hover:underline hover:underline-offset-4">
                         Советы

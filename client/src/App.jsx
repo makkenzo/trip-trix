@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import Advicec from './pages/Advicec';
+import Blog from './pages/Blog'
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/advicec" element={<Advicec />} />
+                <Route path="/blog" element={<Blog/>} />
             </Routes>
         </BrowserRouter>
     );
