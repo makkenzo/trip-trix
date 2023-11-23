@@ -26,6 +26,15 @@ class ApplicationService {
             throw error;
         }
     };
+    getCities = async () => {
+        try {
+            const response = await instance.get('/api/cities/get-cities');
+            return response;
+        } catch (error) {
+            console.error('Error during the register-user request: ', error);
+            throw error;
+        }
+    };
 }
 
 const AppService = new ApplicationService();
