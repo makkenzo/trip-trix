@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
-        <>
+        <div className="bg-gray-100">
             <div className="w-full bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>
                 <Nav />
 
@@ -27,9 +27,9 @@ const HomePage = () => {
             <MainInput />
             <AboutSection />
             <RecomendedSection />
-            <DontMiss/>
-            <Footer/>
-        </>
+            <DontMiss />
+            <Footer />
+        </div>
     );
 };
 
