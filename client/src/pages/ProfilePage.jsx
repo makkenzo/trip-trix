@@ -37,8 +37,6 @@ const ProfilePage = () => {
                         <h1 className='text-2xl  '>Сигменко Сигма Сигмович</h1>
                     </li>
                 </ul>
-                
-                
             </div>
 
 
