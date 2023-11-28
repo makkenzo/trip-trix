@@ -27,16 +27,21 @@ const ProfilePage = () => {
             <div className='container mx-auto flex  flex-col items-center mt-10 '>
                 <ul className='flex - flex-col items-center space-y-5'>
                     <li className='flex'>
-                        <img src={defa} className='w-[250px] h-[250px]' alt="image" srcset=""/>
+                        <img src={defa} className='rounded-lg w-[250px] h-[250px]' alt="image" srcset=""/>
                         <a href="#" className='absolute ml-[230px]'>
                             <CiEdit />
                         </a>
                         
                     </li>
-                    <li>
+                    <li className='flex'>
                         <h1 className='text-2xl  '>Сигменко Сигма Сигмович</h1>
+                        <a href="#" >
+                            <CiEdit />
+                        </a>
                     </li>
                 </ul>
+
+                
             </div>
 
 
